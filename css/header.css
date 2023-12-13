@@ -1,0 +1,103 @@
+.page-container .content {
+  flex-grow: 1;
+}
+
+.content .header {
+  background-color: var(--white-color);
+}
+
+.content .header .input-field {
+  position: relative;
+}
+
+.content .header input {
+  padding: 10px;
+  padding-left: 30px;
+  font-size: 15px;
+  width: 160px;
+  transition-duration: .3s;
+  border: 1px solid #ddd;
+}
+
+.content .header .input-field::before {
+  font-family: var(--icons);
+  content: "\f002";
+  font-weight: 900;
+  font-size: 14px;
+  color: var(--grey-color);
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.content .header input::placeholder {
+  text-transform: capitalize;
+}
+
+.content .header input:focus {
+  width: 220px;
+}
+
+.content .header input:focus::placeholder {
+  color: transparent;
+}
+
+.content .header .info {
+  gap: 10px;
+}
+
+.content .header .info img {
+  width: 32px;
+  height: 32px;
+}
+
+.content .header .info i {
+  font-size: 20px;
+}
+
+.content .header .info i, .content .header .info img {
+  cursor: pointer;
+}
+.content .main-content{
+  padding:0 20px;
+  margin-bottom: 20px;
+}
+
+.content h1{
+  margin:20px 0 40px;
+  position: relative;
+}
+
+.content h1::after,.content h1::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 140%;
+  height: 3px;
+}
+.content h1::before{
+  width: 150px;
+  background-color: var(--white-color);
+  z-index: 1;
+}
+.content h1::after{
+  width: 50px;
+  background-color: var(--black-color);
+  z-index: 2;
+}
+@media (max-width:767px) {
+  .content .header {
+    padding: calc(15px/2);
+  }
+  .content .main-content{
+    padding: 0 calc(15px/2)
+  }
+  .content .header input:focus{
+    width: 180px;
+  }
+}

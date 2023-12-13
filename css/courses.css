@@ -1,0 +1,57 @@
+.sec-grid>div{
+  background-color: var(--white-color);
+  overflow: hidden;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.sec-grid>div img{
+  width: 100%;
+  max-width: 100%;
+}
+.description{
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+.description::after{
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  padding: 6px;
+  content: "course info";
+  text-transform: capitalize;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%,50%);
+  -webkit-transform: translate(-50%,50%);
+  -moz-transform: translate(-50%,50%);
+  -ms-transform: translate(-50%,50%);
+  -o-transform: translate(-50%,50%);
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+.description h2{
+  font-size: 18px;
+}
+.description h2+p{
+  margin: 20px 0;
+  color: var(--grey-color);
+}
+.info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  color: var(--grey-color);
+  height: auto;
+  margin: 0;
+}
+.info .fa-user{
+  font-weight: 400;
+}

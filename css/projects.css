@@ -1,0 +1,136 @@
+.box {
+  background-color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+span.date {
+  align-self: flex-end;
+  font-size: 14px;
+  color: var(--grey-color);
+}
+
+.box h3 {
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+
+.box h3+p {
+  color: var(--grey-color);
+  margin-bottom: 2.5rem;
+}
+
+.imgs-holder {
+  position: relative;
+  height: 70px;
+  padding-bottom: 20px;
+}
+
+.box .imgs-holder img {
+  position: absolute;
+  top: 0;
+  width: 50px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.box .imgs-holder img:hover {
+  cursor: pointer;
+  z-index: 10;
+}
+
+.box .imgs-holder img:nth-of-type(1) {
+  left: 0;
+}
+
+.box .imgs-holder img:nth-of-type(2) {
+  left: 25px;
+}
+
+.box .imgs-holder img:nth-of-type(3) {
+  left: 50px;
+}
+
+.box .imgs-holder img:nth-of-type(4) {
+  left: 75px;
+}
+
+.box .imgs-holder img:nth-of-type(5) {
+  left: 100px;
+}
+
+.spans-holder {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.spans-holder span {
+  display: block;
+  padding: 8px;
+  background-color: #eee;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+@media (max-width:576px){
+  .spans-holder {
+    gap: 4px;
+  }
+  .spans-holder span {
+    padding: 4px;
+    font-size: 12px;
+  }
+}
+.box .rate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.box .rate span:first-of-type {
+  position: relative;
+  width: 50%;
+  height: 8px;
+  background-color: #eee;
+  overflow: hidden;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.box .rate span:first-of-type::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+.box:nth-of-type(5n+1) .rate span:first-of-type::after {
+  background-color: var(--red-color);
+}
+.box .rate span:first-child::after {
+  background-color: var(--green-color);
+  width: 60%;
+}
+.box:nth-of-type(3) .rate span:first-child::after {
+  background-color: var(--blue-color);
+  width: 100%;
+}
+.box .rate span:last-of-type {
+  color: var(--grey-color);
+}
